@@ -1,0 +1,114 @@
+
+body {
+  background-image: url("../images/Stormtrooper.jpg");
+  background-repeat: no-repeat;
+}
+
+/* #main {
+  background-image: url("../images/simple-coolest.jpg");
+
+  height:  800px;
+} */
+
+div {
+  display: block;
+}
+
+.container {
+  overflow: hidden;
+  box-sizing: border-box;
+  float: center;
+  margin-left: auto;
+  margin-top: 200px;
+  position: relative;
+}
+
+.btn {
+  margin-top: 200px
+  float: right;
+  margin-right: 100px;
+}
+
+#center {
+  box-sizing: border-box;
+  float: center;
+  margin-left: auto;
+  margin-top: 100px;
+  position: relative;
+  width: 800px;
+  height: 400px;
+  margin-top: 50%
+  text-align: center;
+}
+
+#good {
+  margin-top: 50px;
+  margin-left: 5px;
+  width: 200px;
+  height: 200px;
+}
+
+#bad {
+  margin-right: 5px;
+  margin-left: 10px;
+  width: 200px;
+  height: 200px;
+  margin-top: 50px;
+}
+
+#choose {
+  width: 400px;
+  height: 40px;
+  margin-top: 2px;
+}
+
+#side {
+  width: 500px;
+  height: 500px;
+}
+
+#xwing {
+  width: 180px;
+  height: 200px;
+  margin-top: 2px;
+}
+
+#falcon {
+  width: 200px;
+  height: 200px;
+  margin-top: 2px;
+}
+
+#ywing {
+  width: 120px;
+  height: 200px;
+  margin-top: 2px;
+}
+
+#character {
+  width: 400px;
+}
+
+#tatooine {
+  width: 250px;
+  height: 200px;
+  margin-top: 75px;
+}
+
+#board {
+  width: 800px;
+  height: 400px;
+  text-align: center;
+}
+
+#chooseDestination {
+  margin-top: 5px;
+  width: 700px;
+}
+
+#backstar {
+  width: 250px;
+  height: 200px;
+  margin-top: 75px;
+  margin-left: 100px;
+}
