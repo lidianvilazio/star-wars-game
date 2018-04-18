@@ -44,5 +44,16 @@ class Form {
     boardBackground.innerHTML = '<img id="chooseDestination"src="./images/chooseDestination.png" alt=""><img id="tatooine"src="./images/tatooine.jpg" alt=""><img id="backstar"src="./images/backstar.jpg" alt="">'
     center.innerHTML = ''
     center.appendChild(boardBackground)
+    EventListener.destinationListener()
+  }
+
+  static renderGame(img) {
+    let game = document.createElement('div')
+    game.id = 'gameBoard'
+    game.innerHTML = ''
+    game.style.backgroundImage = img
+    let center = document.getElementById('center')
+    center.innerHTML = ''
+    center.appendChild(game)
   }
 }

@@ -67,4 +67,16 @@ class EventListener {
       e.preventDefault()
     })
   }
+
+  static destinationListener() {
+    let destination = document.getElementById('board')
+    destination.addEventListener('click', e => {
+      if(e.target.id === "tatooine") {
+        Form.renderGame('url("./images/tatooine.jpg")')
+      } else if (e.target.id === "backstar") {
+        Form.renderGame('url("./images/backstar.jpg")')
+      }
+      e.preventDefault()
+    })
+  }
 }

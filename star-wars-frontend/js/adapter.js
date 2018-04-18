@@ -3,7 +3,6 @@ class Adapter {
     fetch('http://localhost:3000/api/v1/users').then(r=> r.json()).then(json=> {
       json.forEach(user => {
         new User(user.id, user.user_name, user.side, user.character)
-        console.log(User.all)
       })
     })
   }
@@ -25,8 +24,6 @@ class Adapter {
     fetch('http://localhost:3000/api/v1/boards').then(r=> r.json()).then(json=> {
       json.forEach(board => {
         new Board(board.side, board.character)
-        console.log(Board.all)
-
       })
     })
 
