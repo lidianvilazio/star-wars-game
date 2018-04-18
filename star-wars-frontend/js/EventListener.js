@@ -63,11 +63,21 @@ class EventListener {
       } else if(e.target.id === "falcon") {
         User.all[User.all.length-1].character = "falcon"
         Adapter.createUser()
+      }else if(e.target.id === "tiefighter") {
+        User.all[User.all.length-1].character = "falcon"
+        Adapter.createUser()
+      }else if(e.target.id === "tiefighter2") {
+        User.all[User.all.length-1].character = "falcon"
+        Adapter.createUser()
+      }else if(e.target.id === "deathstar") {
+        User.all[User.all.length-1].character = "falcon"
+        Adapter.createUser()
       }
       e.preventDefault()
     })
   }
 
+<<<<<<< HEAD
   static destinationListener() {
     let destination = document.getElementById('board')
     destination.addEventListener('click', e => {
@@ -79,4 +89,13 @@ class EventListener {
       e.preventDefault()
     })
   }
+=======
+
+
+
+
+
+
+
+>>>>>>> bad_side
 }

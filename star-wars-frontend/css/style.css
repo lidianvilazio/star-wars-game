@@ -82,7 +82,7 @@ div {
 }
 
 #character {
-  width: 400px;
+  width: 800px;
 }
 
 #tatooine {
@@ -109,10 +109,20 @@ div {
   margin-left: 100px;
 }
 
+#tiefighter {
+  width: 175px;
+  height: 190px;
+  margin-top: 2px;
+}
 
-#gameBoard {
-    margin-right: 20px;
-    margin-top: 1px;
-    display: block;
-    height: 700px;
+#tiefighter2 {
+  width: 230px;
+  height: 150px;
+  margin-top: 2px;
+}
+
+#deathstar {
+  width: 1900;
+  height: 190px;
+  margin-top: 2px;
 }
