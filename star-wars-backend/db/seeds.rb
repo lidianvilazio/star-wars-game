@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-good = Board.create(side: 'good', character:"./images/ship.png")
-bad = Board.create(side: 'bad', character:"./images/JabbaPromo.png")
-lidian = User.create(user_name: 'lidian')
-abby = User.create(user_name: 'Abby')
+good = Board.create(side: 'good', character:"./images/rob.png")
+bad = Board.create(side: 'bad', character:"./images/fatjabba.png")
+lidian = User.create(user_name: 'lidian', character: "./images/tiefighter.png", side: 'bad')
+abby = User.create(user_name: 'Abby', character: "./images/tiefighter2.png", side: 'bad')

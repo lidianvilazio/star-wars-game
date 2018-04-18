@@ -34,7 +34,7 @@ div {
   position: relative;
   width: 800px;
   height: 800px;
-  display: list-item;
+  display: block;
 }
 
 #good {
@@ -126,3 +126,13 @@ div {
   height: 190px;
   margin-top: 2px;
 }
+
+#gameBoard {
+    height: 700px;
+    margin-right: 20px;
+}
+
+/* #userPlayCharacter {
+  width: 1%;
+  height: 1%;
+} */

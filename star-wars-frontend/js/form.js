@@ -24,7 +24,7 @@ class Form {
   static renderGoodCharacter() {
     let character = document.createElement('div')
     character.id = 'character'
-    character.innerHTML = '<img id="xwing" src="./images/ship.png" alt=""><img id="ywing"src="./images/ship2.png" alt=""><img id="falcon"src="./images/ship3.png" alt="">'
+    character.innerHTML = '<img id="xwing" src="./images/xwing.png" alt=""><img id="ywing"src="./images/ywing.png" alt=""><img id="falcon"src="./images/falcon.png" alt="">'
     center.innerHTML = ''
     center.appendChild(character)
     EventListener.characterListener()
@@ -51,10 +51,10 @@ class Form {
   static renderGame(img) {
     let game = document.createElement('div')
     game.id = 'gameBoard'
-    game.innerHTML = ''
-    game.style.backgroundImage = img
+    game.innerHTML = '<canvas id="canvasPlay" width="700" height="770"></canvas>'
     let center = document.getElementById('center')
     center.innerHTML = ''
     center.appendChild(game)
+    Play.getCanvas(img)
   }
 }

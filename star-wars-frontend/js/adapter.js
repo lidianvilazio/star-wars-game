@@ -16,7 +16,10 @@ class Adapter {
       },
       body: JSON.stringify({user_name: user.user_name, side: user.side, character: user.character})
     }
-    fetch('http://localhost:3000/api/v1/users', config).then(r => r.json()).then(json => console.log(json))
+    fetch('http://localhost:3000/api/v1/users', config).then(r => r.json()).then(json => {
+      let play = new Play()
+      play.user = json
+    })
     Form.renderBackground()
   }
 
@@ -26,6 +29,6 @@ class Adapter {
         new Board(board.side, board.character)
       })
     })
-
   }
+
 }

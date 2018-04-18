@@ -55,47 +55,50 @@ class EventListener {
     let character = document.getElementById('character')
     character,addEventListener('click', e => {
       if(e.target.id === "xwing") {
-        User.all[User.all.length-1].character = "xwing"
+        User.all[User.all.length-1].character = "./images/xwing.png"
         Adapter.createUser()
       } else if(e.target.id === "ywing") {
-        User.all[User.all.length-1].character = "ywing"
+        User.all[User.all.length-1].character = "./images/ywing.png"
         Adapter.createUser()
       } else if(e.target.id === "falcon") {
-        User.all[User.all.length-1].character = "falcon"
+        User.all[User.all.length-1].character = "./images/falcon.png"
         Adapter.createUser()
       }else if(e.target.id === "tiefighter") {
-        User.all[User.all.length-1].character = "falcon"
+        User.all[User.all.length-1].character = "./images/tiefighter.png"
         Adapter.createUser()
       }else if(e.target.id === "tiefighter2") {
-        User.all[User.all.length-1].character = "falcon"
+        User.all[User.all.length-1].character = "./images/tiefighter2.png"
         Adapter.createUser()
       }else if(e.target.id === "deathstar") {
-        User.all[User.all.length-1].character = "falcon"
+        User.all[User.all.length-1].character = "./images/deathstar.png"
         Adapter.createUser()
       }
       e.preventDefault()
     })
   }
 
-<<<<<<< HEAD
+
   static destinationListener() {
     let destination = document.getElementById('board')
     destination.addEventListener('click', e => {
       if(e.target.id === "tatooine") {
-        Form.renderGame('url("./images/tatooine.jpg")')
+        Form.renderGame("./images/tatooine.jpg")
       } else if (e.target.id === "backstar") {
-        Form.renderGame('url("./images/backstar.jpg")')
+        Form.renderGame("./images/backstar.jpg")
       }
       e.preventDefault()
     })
   }
-=======
 
+  static canvasListener() {
+    var canvas = document.getElementById('canvasPlay')
+    document.addEventListener( 'keyup', function(e) {
+      Play.moveUser(e.key)
+  })
+}
 
+static move(key) {
+  console.log(key)
+}
 
-
-
-
-
->>>>>>> bad_side
 }
