@@ -2,8 +2,9 @@ class Board {
   constructor(side, character) {
     this.side = side
     this.character = character
-    this.x = 200
+    this.x = Math.floor((Math.random() * 770));
     this.y = 75
+    this.speed = 100
     Board.all.push(this)
   }
 

@@ -20,6 +20,15 @@ class Play {
     Board.getBoard()
     Play.renderUserCharacter()
     Play.renderBoardCharacter()
+    Play.render()
+  }
+
+  static render() {
+    var canvas = document.getElementById('canvasPlay')
+    var ctx = Play.getCtx()
+    ctx.clearRect(0, 0, canvas.with, canvas.height);
+    debugger
+    Play.getCanvas()
   }
 
   static renderUserCharacter() {

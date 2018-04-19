@@ -30,15 +30,18 @@ class User {
 
   canvasListener() {
     document.addEventListener( 'keyup', e => {
-      User.moveUser(e.key)
+      console.log(e)
+      // User.moveUser(e.key)
   })
 }
 
-  static moveUser(key) {
-    User.fUser()
-    console.log(':)')
-    debugger
-  }
+  // static moveUser(key) {
+  //   let f = User.findUser(Play.all[0].user)
+  //   console.log(f)
+  //   User.fUser()
+  //   console.log(':)')
+  //   debugger
+  // }
 
 }
 
