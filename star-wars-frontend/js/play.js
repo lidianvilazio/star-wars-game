@@ -22,40 +22,55 @@ class Play {
     Play.renderBoardCharacter()
   }
 
-  static renderUserCharacter(x=0,y=0) {
-    x = 1600
-    y = 3380
+  static renderUserCharacter() {
     let ctx = Play.getCtx()
-    let character = new Image()
-    character.src = Play.all[0].user.character
     ctx.scale(0.2, 0.2);
-    ctx.drawImage(character, x, y);
-    EventListener.canvasListener()
+    Play.all[0].user.renderUser(ctx);
   }
+
+  // static renderUserCharacter(x=0,y=0) {
+  //   x = 1600
+  //   y = 3380
+  //   // x = 200
+  //   // y = 300
+  //   let ctx = Play.getCtx()
+  //   let character = new Image()
+  //   character.src = Play.all[0].user.character
+  //   ctx.scale(0.2, 0.2);
+  //   ctx.drawImage(character, x, y);
+  //   EventListener.canvasListener()
+  // }
 
   static renderBoardCharacter() {
     let board =  Play.all[0].board
     let ctx = Play.getCtx()
-    let enemy = new Image()
-    enemy.src = board.character
-    if(board.side === "bad") {
-      ctx.drawImage(enemy, 200, 75, 400,400);
-    } else {
-      ctx.drawImage(enemy, 200, 75, 300,400);
-    }
+    board.renderBoard(ctx)
   }
 
-  static moveUser(key) {
-    debugger
-    if(key === "ArrowRight") {
-      Play.renderUserCharacter(1600,2380)
-    } else if(key === "ArrowLeft") {
-      Play.renderUserCharacter(1600,4380)
-    } else if(key === "ArrowUp") {
-      Play.renderUserCharacter(2600,3380)
-    }
-  }
+  // static renderBoardCharacter() {
+  //   let board =  Play.all[0].board
+  //   let ctx = Play.getCtx()
+  //   let enemy = new Image()
+  //   enemy.src = board.character
+  //   if(board.side === "bad") {
+  //     ctx.drawImage(enemy, 200, 75, 400,400);
+  //     // ctx.drawImage(enemy, 200, 75, 60,60);
+  //   } else {
+  //     ctx.drawImage(enemy, 200, 75, 300,400);
+  //     // ctx.drawImage(enemy, 200, 75, 60,0);
+  //   }
+  // }
 
+  // static moveUser(key) {
+  //   debugger
+  //   if(key === "ArrowRight") {
+  //     Play.renderUserCharacter(1600,2380)
+  //   } else if(key === "ArrowLeft") {
+  //     Play.renderUserCharacter(1600,4380)
+  //   } else if(key === "ArrowUp") {
+  //     Play.renderUserCharacter(2600,3380)
+  //   }
+  // }
 }
 
 Play.all = []

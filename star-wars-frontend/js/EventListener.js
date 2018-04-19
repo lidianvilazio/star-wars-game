@@ -53,7 +53,7 @@ class EventListener {
 
   static characterListener() {
     let character = document.getElementById('character')
-    character,addEventListener('click', e => {
+    character.addEventListener('click', e => {
       if(e.target.id === "xwing") {
         User.all[User.all.length-1].character = "./images/xwing.png"
         Adapter.createUser()
@@ -89,16 +89,5 @@ class EventListener {
       e.preventDefault()
     })
   }
-
-  static canvasListener() {
-    var canvas = document.getElementById('canvasPlay')
-    document.addEventListener( 'keyup', function(e) {
-      Play.moveUser(e.key)
-  })
-}
-
-static move(key) {
-  console.log(key)
-}
 
 }
