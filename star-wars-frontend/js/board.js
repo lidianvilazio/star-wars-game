@@ -33,9 +33,9 @@ class Board {
     }
 
     if (this.right) {
-      return this.x += 4
+      return this.x += 5
     } else {
-      return this.x -= 4
+      return this.x -= 5
     }
   }
 

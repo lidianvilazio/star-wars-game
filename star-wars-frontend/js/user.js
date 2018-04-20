@@ -7,6 +7,7 @@ class User {
     this.score = score
     this.x = 10
     this.y = 670
+    this.life = 5
     this.character = character
     User.all.push(this)
   }
@@ -21,7 +22,6 @@ class User {
     let character = new Image()
     character.src = this.character
     ctx.drawImage(character, this.x, this.y, 80,80);
-    // this.checkCollisionsBullets()
   }
 
   canvasListener() {
@@ -48,23 +48,14 @@ class User {
         user.x += 20
       }
     } else if (key === 38) {
-       new Shoot(user.x, 650)
-       new Bullet(Play.all[0].board.x, Play.all[0].board.y+70)
-       Play.all[0].shoot = true
+      let shootAudio = new Audio()
+      shootAudio.src = './music/shoot.mp3'
+      shootAudio.play()
+      new Shoot(user.x, 650)
+      new Bullet(Play.all[0].board.x, Play.all[0].board.y+70)
+      Play.all[0].shoot = true
     }
   }
-
-  // checkCollisionsBullets() {
-  //   Bullet.all.forEach(bullet => {
-  //     console.log(this.x)
-  //     console.log(bullet.x)
-  //     if(Math.round(bullet.x) === this.x) {
-  //       console.log(this.x)
-  //       console.log(bullet.x)
-  //       console.log(":)")
-  //     }
-  //   })
-  // }
 
 
 }

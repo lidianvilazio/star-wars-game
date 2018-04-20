@@ -55,7 +55,30 @@ class Form {
     let center = document.getElementById('center')
     center.innerHTML = ''
     center.appendChild(game)
-    setInterval(() => {Play.getCanvas(img)}, 50)
+    Play.all[0].interval = setInterval(() => {Play.getCanvas(img);}, 50)
     Play.all[0].user.canvasListener()
+    let audio = new Audio()
+    audio.src = './music/music.mp3'
+    Play.all[0].audio = audio
+    Play.all[0].audio.play()
+    // setInterval(() => {}, 120000)
+  }
+
+  static renderGameOver() {
+    let gameOver = document.createElement('div')
+    gameOver.id = 'gameOver'
+    gameOver.innerHTML = '<img id="chooseDestination" src="./images/gameOver.png" alt="">'
+    let center = document.getElementById('center')
+    center.innerHTML = ''
+    center.appendChild(gameOver)
+  }
+
+  static renderWin() {
+    let win = document.createElement('div')
+    win.id = 'gameOver'
+    win.innerHTML = '<img id="chooseDestination" src="./images/win.png" alt="">'
+    let center = document.getElementById('center')
+    center.innerHTML = ''
+    center.appendChild(win)
   }
 }

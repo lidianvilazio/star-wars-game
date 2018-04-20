@@ -3,7 +3,6 @@ class Play {
   constructor(user, board) {
     this.user = user
     this.board = board
-    this.shoot = false
     this.x = 0
     this.y = 590
     Play.all.push(this)
@@ -25,9 +24,6 @@ class Play {
     Bullet.all.forEach(bullet => {
       bullet.renderShoot(ctx)
     })
-    // Bullet.all.forEach(bullet => {
-    //   console.log(bullet.x);
-    // })
   }
 
   static renderUserCharacter() {
@@ -40,19 +36,8 @@ class Play {
     let board =  Play.all[0].board
     var canvas = document.getElementById('canvasPlay')
     var ctx = canvas.getContext('2d')
-    let canvasObj = board.renderBoard(ctx)
+    board.renderBoard(ctx)
   }
-
-  // static checkCollisionsBullets() {
-  //   debugger
-  //   Bullet.all.forEach(bullet => {
-  //     if(Math.round(bullet.x) === Play.all[0].user.x) {
-  //       console.log(Play.all[0].user.x)
-  //       console.log(bullet.x)
-  //       console.log(":)")
-  //     }
-  //   })
-  // }
 
 }
 
