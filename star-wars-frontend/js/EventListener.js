@@ -77,7 +77,6 @@ class EventListener {
     })
   }
 
-
   static destinationListener() {
     let destination = document.getElementById('board')
     destination.addEventListener('click', e => {

@@ -3,83 +3,57 @@ class Play {
   constructor(user, board) {
     this.user = user
     this.board = board
+    this.shoot = false
+    this.x = 0
+    this.y = 590
     Play.all.push(this)
   }
 
-  static getCtx() {
+  static getCanvas(img) {
     var canvas = document.getElementById('canvasPlay')
     var ctx = canvas.getContext('2d')
-    return ctx
-  }
-
-  static getCanvas(img) {
-    var ctx = Play.getCtx()
     var background = new Image()
     background.src = img
     ctx.drawImage(background, 10, 10);
     Board.getBoard()
     Play.renderUserCharacter()
     Play.renderBoardCharacter()
-    Play.render()
-  }
+      Shoot.all.forEach(shoot => {
+        shoot.renderShoot(ctx)
+      })
 
-  static render() {
-    var canvas = document.getElementById('canvasPlay')
-    var ctx = Play.getCtx()
-    ctx.clearRect(0, 0, canvas.with, canvas.height);
-    debugger
-    Play.getCanvas()
+    Bullet.all.forEach(bullet => {
+      bullet.renderShoot(ctx)
+    })
+    // Bullet.all.forEach(bullet => {
+    //   console.log(bullet.x);
+    // })
   }
 
   static renderUserCharacter() {
-    let ctx = Play.getCtx()
-    ctx.scale(0.2, 0.2);
+    var canvas = document.getElementById('canvasPlay')
+    var ctx = canvas.getContext('2d')
     Play.all[0].user.renderUser(ctx);
   }
 
-  // static renderUserCharacter(x=0,y=0) {
-  //   x = 1600
-  //   y = 3380
-  //   // x = 200
-  //   // y = 300
-  //   let ctx = Play.getCtx()
-  //   let character = new Image()
-  //   character.src = Play.all[0].user.character
-  //   ctx.scale(0.2, 0.2);
-  //   ctx.drawImage(character, x, y);
-  //   EventListener.canvasListener()
-  // }
-
   static renderBoardCharacter() {
     let board =  Play.all[0].board
-    let ctx = Play.getCtx()
-    board.renderBoard(ctx)
+    var canvas = document.getElementById('canvasPlay')
+    var ctx = canvas.getContext('2d')
+    let canvasObj = board.renderBoard(ctx)
   }
 
-  // static renderBoardCharacter() {
-  //   let board =  Play.all[0].board
-  //   let ctx = Play.getCtx()
-  //   let enemy = new Image()
-  //   enemy.src = board.character
-  //   if(board.side === "bad") {
-  //     ctx.drawImage(enemy, 200, 75, 400,400);
-  //     // ctx.drawImage(enemy, 200, 75, 60,60);
-  //   } else {
-  //     ctx.drawImage(enemy, 200, 75, 300,400);
-  //     // ctx.drawImage(enemy, 200, 75, 60,0);
-  //   }
+  // static checkCollisionsBullets() {
+  //   debugger
+  //   Bullet.all.forEach(bullet => {
+  //     if(Math.round(bullet.x) === Play.all[0].user.x) {
+  //       console.log(Play.all[0].user.x)
+  //       console.log(bullet.x)
+  //       console.log(":)")
+  //     }
+  //   })
   // }
 
-  // static moveUser(key) {
-  //   debugger
-  //   if(key === "ArrowRight") {
-  //     Play.renderUserCharacter(1600,2380)
-  //   } else if(key === "ArrowLeft") {
-  //     Play.renderUserCharacter(1600,4380)
-  //   } else if(key === "ArrowUp") {
-  //     Play.renderUserCharacter(2600,3380)
-  //   }
-  // }
 }
 
 Play.all = []

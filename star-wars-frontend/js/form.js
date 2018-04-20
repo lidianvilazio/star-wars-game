@@ -55,6 +55,7 @@ class Form {
     let center = document.getElementById('center')
     center.innerHTML = ''
     center.appendChild(game)
-    Play.getCanvas(img)
+    setInterval(() => {Play.getCanvas(img)}, 50)
+    Play.all[0].user.canvasListener()
   }
 }
