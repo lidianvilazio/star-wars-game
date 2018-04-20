@@ -1,6 +1,6 @@
 class User {
 
-  constructor(id, user_name, side, score, character) {
+  constructor(id, user_name, side, character, score=0) {
     this.id = id
     this.user_name = user_name
     this.side = side

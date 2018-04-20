@@ -23,7 +23,14 @@ class EventListener {
     let submit = document.getElementById('firstForm')
     submit.addEventListener('submit', (e) => {
       if(e.target.firstElementChild.id === 'in') {
-        console.log(User.findUser(e.target.children[1].value))
+        if(User.findUser(e.target.children[1].value) !== undefined) {
+          let play = new Play()
+          play.user = User.findUser(e.target.children[1].value)
+          Form.renderBackground()
+          console.log(User.findUser(e.target.children[1].value))
+        } else {
+          alert("You are not in the galaxy!");
+        }
       } else if(e.target.firstElementChild.id === 'up') {
         if(User.findUser(e.target.children[1].value) === undefined){
           let newUser = new User()

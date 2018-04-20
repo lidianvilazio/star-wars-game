@@ -13,6 +13,6 @@ class Api::V1::UsersController < ApplicationController
   private
 
   def user_params
-    params.permit(:user_name,:side,:character, :score)
+    params.permit(:user_name,:character, :side, :score)
   end
 end

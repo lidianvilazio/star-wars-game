@@ -60,8 +60,9 @@ class Form {
     let audio = new Audio()
     audio.src = './music/music.mp3'
     Play.all[0].audio = audio
-    Play.all[0].audio.play()
-    // setInterval(() => {}, 120000)
+    setInterval(() => {Play.all[0].audio.play()}, 1200)
+    // setTimeout(function(){Play.all[0].audio.play()}, 12000);
+    // setInterval(() => {Play.all[0].audio.play()}, 120000)
   }
 
   static renderGameOver() {
