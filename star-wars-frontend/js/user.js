@@ -7,7 +7,7 @@ class User {
     this.score = score
     this.x = 10
     this.y = 670
-    this.life = 5
+    this.life = 1
     this.character = character
     User.all.push(this)
   }

@@ -6,7 +6,7 @@ class Board {
     this.y = 20
     this.speed = 100
     this.right = true
-    this.life = 10
+    this.life = 1
     Board.all.push(this)
   }
 

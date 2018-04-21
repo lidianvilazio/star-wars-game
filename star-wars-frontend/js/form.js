@@ -61,14 +61,13 @@ class Form {
     audio.src = './music/music.mp3'
     Play.all[0].audio = audio
     setInterval(() => {Play.all[0].audio.play()}, 1200)
-    // setTimeout(function(){Play.all[0].audio.play()}, 12000);
-    // setInterval(() => {Play.all[0].audio.play()}, 120000)
   }
 
   static renderGameOver() {
     let gameOver = document.createElement('div')
     gameOver.id = 'gameOver'
-    gameOver.innerHTML = '<img id="chooseDestination" src="./images/gameOver.png" alt="">'
+    gameOver.innerHTML =
+      `<img id="gameover" src="./images/gameOver.png" alt=""><br><img id="youlose" src="./images/atatgiphy.gif" alt=""><br><p>Your Score: ${Play.all[0].user.score}</p>`
     let center = document.getElementById('center')
     center.innerHTML = ''
     center.appendChild(gameOver)
@@ -77,7 +76,8 @@ class Form {
   static renderWin() {
     let win = document.createElement('div')
     win.id = 'gameOver'
-    win.innerHTML = '<img id="chooseDestination" src="./images/win.png" alt="">'
+    win.innerHTML =
+      `<img id="gamewin" src="./images/win.png" alt=""><br><img id="youwin" src="./images/chewywin.gif" alt=""><br><p>Your Score: ${Play.all[0].user.score}</p>`
     let center = document.getElementById('center')
     center.innerHTML = ''
     center.appendChild(win)

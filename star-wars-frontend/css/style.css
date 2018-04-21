@@ -132,6 +132,44 @@ div {
     margin-right: 20px;
 }
 
+#youlose {
+ display: block;
+ margin-left: auto;
+ margin-right: auto;
+ width: 700px;
+}
+
+#youwin {
+ display: block;
+ margin-left: auto;
+ margin-right: auto;
+ width: 700px;
+}
+
+#gameover {
+ width: 700px;
+ margin-top: 250px;
+ display: block;
+ margin-left: auto;
+ margin-right: auto;
+}
+
+#gamewin {
+ width: 700px;
+ margin-top: 250px;
+ display: block;
+ margin-left: auto;
+ margin-right: auto;
+}
+
+#gameOver {
+ text-align: center;
+}
+
+#gameWin {
+ text-align: center;
+}
+
 /* #userPlayCharacter {
   width: 1%;
   height: 1%;
