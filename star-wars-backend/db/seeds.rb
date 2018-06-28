@@ -8,5 +8,5 @@
 
 good = Board.create(side: 'good', character:"./images/rob.png")
 bad = Board.create(side: 'bad', character:"./images/fatjabba.png")
-lidian = User.create(user_name: 'lidian', character: "./images/tiefighter.png", side: 'bad')
-abby = User.create(user_name: 'Abby', character: "./images/tiefighter2.png", side: 'bad')
+# lidian = User.create(user_name: 'lidian', character: "./images/tiefighter.png", side: 'bad')
+# abby = User.create(user_name: 'Abby', character: "./images/tiefighter2.png", side: 'bad')
